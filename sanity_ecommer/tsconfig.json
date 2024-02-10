@@ -14,7 +14,10 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    
+    "baseUrl": ".",
+    "paths": {
+      "sanity/cli": ["node_modules/sanity/cli"]
+    }
   },
   "include": ["**/*.ts", "**/*.tsx", "schemas/index.ts"],
   "exclude": ["node_modules"]
