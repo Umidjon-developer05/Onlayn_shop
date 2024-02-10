@@ -1,4 +1,5 @@
 {
+
   "tailwind": {
     "config": "tailwind.config.js",
     "css": "app/globals.css",

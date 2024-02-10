@@ -1,8 +1,7 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "paths": {
-      "sanity/cli": ["node_modules/sanity/cli"]
+      "@/*": ["./*"]
     }
   }
 }

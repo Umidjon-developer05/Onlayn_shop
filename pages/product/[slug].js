@@ -4,6 +4,7 @@ import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-
 import { client, urlFor } from '../../lib/client';
 import { Product } from '../../components/index';
 import { useStateContext } from '../../context/StateContext';
+import Image from 'next/image';
 const ProductDetails = ({ product, products }) => {
   const { image, name, details, price } = product;
   const [index, setIndex] = useState(0);
@@ -14,12 +15,14 @@ const ProductDetails = ({ product, products }) => {
       <div className="product-detail-container">
         <div>
           <div className="image-container">
-            <img src={urlFor(image && image[index])} className="product-detail-image" />
+            <Image alt='sas' width={1000} height={1000} src={urlFor(image && image[index])} className="product-detail-image" />
           </div>
           <div className="small-images-container">
             {image?.map((item, i) => (
-              <img 
+              <Image alt='sas' 
                 key={i}
+                width={1000} 
+                height={1000}
                 src={urlFor(item)}
                 className={i === index ? 'small-image selected-image' : 'small-image'}
                 onMouseEnter={() => setIndex(i)}
