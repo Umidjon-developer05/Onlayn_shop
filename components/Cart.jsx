@@ -14,14 +14,13 @@ const Cart = () => {
 
 
   
-  const submitForm = async (e) => {
+  const submitForm = async () => {
     let res = await fetch("http://localhost:3000/api/cart", {
       method: "POST",
       body: JSON.stringify({
         cartItems
       }),
     });
-    res = await res.json();
     setCartItems([])
     setShowCart(false)
     setTotalQuantities(0)

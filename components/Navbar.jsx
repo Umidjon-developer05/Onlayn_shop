@@ -3,9 +3,8 @@ import Link from 'next/link';
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import { UserButton, useUser } from "@clerk/nextjs";
 import { useStateContext} from '../context/StateContext';
-import Cart from './Cart';
 const Navbar = () => {
-  const { showCart, setShowCart, totalQuantities } = useStateContext();
+  const {  setShowCart, totalQuantities } = useStateContext();
   const {user,isLoaded} = useUser()
   return (
     <div className="navbar-container">
