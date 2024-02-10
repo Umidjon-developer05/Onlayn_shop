@@ -1,7 +1,4 @@
 {
-  "style": "default",
-  "rsc": true,
-  "tsx": false,
   "tailwind": {
     "config": "tailwind.config.js",
     "css": "app/globals.css",
