@@ -15,7 +15,7 @@ const Cart = () => {
 
   
   const submitForm = async () => {
-    let res = await fetch("http://localhost:3000/api/cart", {
+     await fetch("http://localhost:3000/api/cart", {
       method: "POST",
       body: JSON.stringify({
         cartItems
