@@ -19,6 +19,6 @@
       "sanity/cli": ["node_modules/sanity/cli"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx", "schemas/index.ts"],
+  "include": ["**/*.ts", "**/*.tsx", "schemas/index.ts", "sanity.cli.js", "sanity.config.js"],
   "exclude": ["node_modules"]
 }
