@@ -9,12 +9,26 @@ import { urlFor } from '../lib/client';
 
 const Cart = () => {
   const cartRef = useRef();
-  const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuanitity, onRemove } = useStateContext();
+  const { totalPrice, totalQuantities,setTotalQuantities, cartItems,setCartItems, setShowCart, toggleCartItemQuanitity, onRemove } = useStateContext();
 
 
+  
+  const submitForm = async (e) => {
+    let res = await fetch("http://localhost:3000/api/cart", {
+      method: "POST",
+      body: JSON.stringify({
+        cartItems
+      }),
+    });
+    res = await res.json();
+    setCartItems([])
+    setShowCart(false)
+    setTotalQuantities(0)
+    toast.success(`Zakaz berildi 😊`)
+  };
   return (
-    <div className="cart-wrapper" ref={cartRef}>
-      <div className="cart-container">
+    <div  ref={cartRef}>
+      <div>
         <button
         type="button"
         className="cart-heading"
@@ -40,7 +54,6 @@ const Cart = () => {
           </div>
         )}
 
-        <div className="product-container">
           {cartItems.length >= 1 && cartItems.map((item) => (
             <div className="product" key={item._id}>
               <img src={urlFor(item?.image[0])} className="cart-product-image" />
@@ -77,15 +90,14 @@ const Cart = () => {
               <h3>Subtotal:</h3>
               <h3>${totalPrice}</h3>
             </div>
-            <div className="btn-container">
-              <button type="button" className="btn" >
-                Pay with Stripe
+            <div >
+              <button type="button" className="btn" onClick={()=>submitForm() }>
+                 Zakaz berish 
               </button>
             </div>
           </div>
         )}
       </div>
-    </div>
   )
 }
 

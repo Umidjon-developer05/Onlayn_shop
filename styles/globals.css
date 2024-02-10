@@ -15,22 +15,31 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
+.btn_get:hover{
+  transition: 1s all;
+  
+  transform: scale(1.1);
+}
+.btn_get{
+  height: 40px;
+  width:  90px;
+  }
 .main-container{
-max-width: 1400px; 
-margin: auto;
-width: 100%;
+    max-width: 1400px; 
+    margin: auto;
+
 
 }
-.layout{
-  padding: 10px;
-}
+
 
 .navbar-container{
   display: flex;
   justify-content: space-between;
-  margin: 6px 18px;
+    padding: 30px;
+    align-items: center;
   position: relative;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 5px 5px #2222;
 }
 .marquee-text{
   font-size: 29px;
@@ -72,6 +81,7 @@ width: 100%;
 .cart-icon{
   font-size: 25px;
   color: gray;
+  padding-top:10px ;
   cursor: pointer;
   position: relative;
   transition: transform .4s ease;
@@ -84,6 +94,7 @@ width: 100%;
 .cart-item-qty{
   position: absolute;
   right: -8px;
+  top: 0px;
   font-size: 12px;
   color: #eee;
   background-color: #f02d34;

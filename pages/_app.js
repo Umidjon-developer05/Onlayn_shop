@@ -1,18 +1,20 @@
 import React from 'react';
 import { Toaster } from 'react-hot-toast';
-
+import { ClerkProvider } from '@clerk/nextjs'
 import '../styles/globals.css';
-import { Layout } from '@/components';
-import { StateContext } from '@/context/StateContext';
+import  Layout  from '../components/Layout';
+import  {StateContext}  from '../context/StateContext';
 
 function MyApp({ Component, pageProps }) {
   return (
+    <ClerkProvider {...pageProps}>
     <StateContext>
-       <Layout>
-          <Toaster/>
+      <Layout>
+           <Toaster/>
          <Component {...pageProps} />
-       </Layout>
-    </StateContext>
+        </Layout>
+     </StateContext> 
+     </ClerkProvider> 
   )
 }
 
