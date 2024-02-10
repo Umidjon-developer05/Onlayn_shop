@@ -23,7 +23,7 @@ const FooterBanner = ({ footerBanner: { discount, largeText1, largeText2, saleTi
           </Link>
         </div>
 
-        <Image
+        <img
         alt='adas'
         width={1000}
         height={1000} 
