@@ -19,7 +19,7 @@ const ProductDetails = ({ product, products }) => {
           </div>
           <div className="small-images-container">
             {image?.map((item, i) => (
-              <img alt='sas' 
+              <Image alt='sas' 
                 key={i}
                 width={1000} 
                 height={1000}

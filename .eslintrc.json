@@ -1,9 +1,3 @@
 {
- "extends": [
-    "next",
-    "plugin:@typescript-eslint/recommended"
-  ],
-  "rules": {
-    // your rules here
-  }
+  "extends": [ "next/babel", "next/core-web-vitals"]
 }
