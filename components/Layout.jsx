@@ -8,7 +8,11 @@ import Loading from "./Loading"
 
 const Layout = ({ children }) => {
   const {user,isLoaded} = useUser()
-  console.log(isLoaded);
+ if (!isLoaded) {
+      return(
+        <Loading />
+      )
+  }
   if (process.env.NEXT_PUBLIC_EMAIL !== user?.primaryEmailAddress?.emailAddress ) {    
     return (
       <>
