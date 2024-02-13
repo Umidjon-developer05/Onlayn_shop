@@ -5,7 +5,7 @@ import Admin from './Admin';
 const AdminDashboard = () => {
     const  [data,setData] =useState()
     const GetAllProduct = async ()=> {
-        await axios("http://localhost:3000/api/cart",{method:"GET"}).then((res)=>setData(res?.data?.data));
+        await axios("https://onlayn-shop.vercel.app/api/cart",{method:"GET"}).then((res)=>setData(res?.data?.data));
     }
     useEffect(()=>{
         GetAllProduct()
