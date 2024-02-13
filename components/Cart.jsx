@@ -16,7 +16,7 @@ const Cart = () => {
   } = useForm();
 
   const submitForm = async (data) => {
-     await fetch("http://localhost:3000/api/cart", {
+     await fetch("https://onlayn-shop.vercel.app/api/cart", {
       method: "POST",
       body: JSON.stringify({
         cartItems,
