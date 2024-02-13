@@ -11,7 +11,7 @@ const Navbar = () => {
 
       <div>
         <p className="logo">
-        <Link href="/">JSM Headphones</Link>
+        <Link href="/">Headphones</Link>
       </p>
       </div>
      <div style={{display:"flex",gap:"30px",alignItems:"center"}}>
@@ -25,7 +25,6 @@ const Navbar = () => {
               isLoaded && user ? <UserButton afterSignOutUrl='/'  /> : <Link href={'/sign-in'}><button style={{border:"none",borderRadius:"10px",boxShadow:"2px 2px 5px 5px #2222",cursor:"pointer"}} className='btn_get'>Get Started</button></Link>
       }
      </div>
-      {/* {showCart && <Cart />} */}
     </div>
   )
 }

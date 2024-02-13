@@ -5,11 +5,52 @@ body, * {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   box-sizing: border-box;
-
+  
+  text-decoration: none !important;
 }
 ::-webkit-scrollbar {
   width: 0px;
 }
+
+a{
+  color: #222 !important;
+}
+.Scroll{
+  overflow-y: auto;
+  height: 300px;
+}
+
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #FFF;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-bottom: 4px solid #FF3D00;
+  border-left: 4px solid transparent;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
 
 a {
   color: inherit;
@@ -140,7 +181,7 @@ a {
 }
 
 .hero-banner-container{
-  padding: 100px 40px;
+  padding: 50px 40px;
   background-color: #dcdcdc;
   border-radius: 15px;
   position: relative;
@@ -434,7 +475,15 @@ padding: 30px 65px;
  color: #324d67;
 
 }
+.product-detail-image1{
+  border-radius: 15px;
+   background-color: #ebebeb;
 
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
 .product-detail-image{
   border-radius: 15px;
    background-color: #ebebeb;
@@ -638,7 +687,7 @@ margin-top: 160px;
     width: 77%;
     height: 62%;
     top: -2%;
-    right: -6%;
+    right: 0;
   }
   .footer-banner-container{
     height: 560px;
@@ -681,7 +730,7 @@ margin-top: 160px;
     font-size: 40px;
   }
   .hero-banner-container button{
-    margin-top: 90px;
+    margin-top: 130px;
     z-index: 10000;
   }
   .desc{

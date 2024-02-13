@@ -4,7 +4,6 @@ import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-
 import { client, urlFor } from '../../lib/client';
 import { Product } from '../../components/index';
 import { useStateContext } from '../../context/StateContext';
-import Image from 'next/image';
 const ProductDetails = ({ product, products }) => {
   const { image, name, details, price } = product;
   const [index, setIndex] = useState(0);

@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 const Product = ({ product: { image, name, slug, price } }) => {
   return (
-    <div>
+    <div data-aos="zoom-out-up" >
       <Link href={`/product/${slug.current}`}>
         <div className="product-card">
           <img
