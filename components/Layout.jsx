@@ -9,32 +9,30 @@ import Loading from "./Loading"
 const Layout = ({ children }) => {
   const {user,isLoaded} = useUser()
   console.log(isLoaded);
-  if (process.env.NEXT_PUBLIC_EMAIL === user?.primaryEmailAddress?.emailAddress ) {    
-      return(
+  if (process.env.NEXT_PUBLIC_EMAIL !== user?.primaryEmailAddress?.emailAddress ) {    
+    return (
+      <>
         <div>
-            <Layout1/>
+          <div className="layout">
+          <Head>
+            <title>Headphone Store</title>
+          </Head>
+          <header>
+            <Navbar />
+          </header>
+          <main className="main-container">
+            {children}
+          </main>
+          <footer>
+          </footer>
+        </div>        
         </div>
-      )
+      </>
+    )
   }else{
       if (isLoaded) {
-        return (
-          <>
-            <div>
-              <div className="layout">
-              <Head>
-                <title>Headphone Store</title>
-              </Head>
-              <header>
-                <Navbar />
-              </header>
-              <main className="main-container">
-                {children}
-              </main>
-              <footer>
-              </footer>
-            </div>        
-            </div>
-          </>
+        return(
+          <Layout1/>
         )
       }
       else{
