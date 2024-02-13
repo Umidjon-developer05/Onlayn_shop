@@ -24,7 +24,7 @@ const Admin = ({cartItems}) => {
             <span>{item?.price}</span>
             </div>
             <div>
-            <span className='text-body-tertiary'>Mahsulot soni : </span>
+            <span className='text-body-tertiary'>Mahsulot  soni : </span>
             <span>{item?.quantity}</span>
             </div>
             <div>
